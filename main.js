@@ -81,7 +81,7 @@ function installLibraries(callback) {
     if (parts.length > 1 && parts[parts.length - 2] === 'node_modules') {
         parts.splice(parts.length - 2, 2);
         userDataDir = parts.join('/');
-        userDataDir += '/iobroker-data/node-red/';
+        userDataDir += '/iobroker-data/node-red_' + adapter.instance + '/';
     }
 
     if (adapter.common && adapter.common.npmLibs && !adapter.config.palletmanagerEnabled) {
